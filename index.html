@@ -1,0 +1,186 @@
+<div id="dp-wrapper" class="dp-wrapper dp-basic-bar variation-2" style="background-color: #1e2229; color: #ffffff; padding: 24px; border-radius: 12px; max-width: 900px; margin: 0 auto; font-family: system-ui, sans-serif; box-shadow: 0 8px 25px rgba(0,0,0,0.5); border: 1px solid #323842;">
+    <header class="dp-header" style="background: linear-gradient(135deg, #1c8a24, #0f4d14); padding: 22px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4);">
+        <h2 style="margin: 0; font-size: 26px; color: #ffffff; font-weight: 800; display: flex; align-items: center; gap: 10px;">
+            <span>🤠</span> Western Frontier: Claim Your Territory
+        </h2>
+        <p style="margin: 8px 0 0 0; color: #e1ffe3; font-weight: 600; font-size: 14px;">Drag each frontier element card into its proper category zone before high noon!</p>
+    </header>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; background-color: #272c35; padding: 14px 22px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; border-left: 6px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+        <div style="font-size: 16px;">Score: <span id="western-score" style="color: #55ff66; font-size: 18px;">0</span> / 3</div>
+        <div id="western-badge" style="background-color: #323842; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #ffb703;">Saddle Up 🌵</div>
+        <div style="font-size: 16px;">Streak: 🔥 <span id="western-streak" style="color: #ff9f43; font-size: 18px;">0</span></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 20px;">
+        <div class="western-zone" data-category="setting" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>🏜️</span> Frontier Setting
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+        <div class="western-zone" data-category="iconography" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>🔫</span> Iconography &amp; Props
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+        <div class="western-zone" data-category="theme" style="background-color: #272c35; border: 2px dashed #3e4653; border-radius: 8px; padding: 18px; min-height: 170px; transition: all 0.3s ease;">
+            <h3 style="margin-top: 0; color: #55ff66; font-size: 16px; border-bottom: 2px solid #3e4653; padding-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                <span>⚖️</span> Mythic Theme
+            </h3>
+            <div class="zone-items" style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <div style="background-color: #272c35; padding: 18px; border-radius: 8px; border-top: 4px solid #1c8a24; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; color: #ffffff; font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span>🎟️</span> Western Card Bank <span style="font-size: 12px; color: #8b949e; font-weight: normal;">(Drag cards upward)</span>
+        </h3>
+        <div id="western-bank" style="display: flex; flex-wrap: wrap; gap: 12px; min-height: 90px;">
+            <div class="western-card" draggable="true" id="wcard-1" data-category="setting" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1533588964736-1f99222c009d?auto=format&fit=crop&w=80&q=80" alt="Desert landscape" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Sweeping landscape shots of vast deserts and dusty towns</span>
+            </div>
+            <div class="western-card" draggable="true" id="wcard-2" data-category="iconography" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(50% - 6px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1551628059-4504192b45e7?auto=format&fit=crop&w=80&q=80" alt="Cowboy boots" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">Cowboy hats, swinging saloon doors, and six-shooters</span>
+            </div>
+            <div class="western-card" draggable="true" id="wcard-3" data-category="theme" style="background-color: #323842; border: 1px solid #485263; border-radius: 8px; padding: 12px; cursor: grab; display: flex; align-items: center; gap: 12px; width: calc(100% - 0px); box-sizing: border-box; transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=80&q=80" alt="Frontier justice" style="width: 38px; height: 38px; border-radius: 6px; object-fit: cover;">
+                <span style="font-size: 13px; font-weight: 600; line-height: 1.4;">The eternal conflict between lawless wilderness and civilization</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="western-feedback" style="margin-top: 16px; padding: 14px; border-radius: 8px; text-align: center; font-weight: bold; display: none; font-size: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);"></div>
+    <button id="western-reset" style="background-color: #1c8a24; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 16px; display: none; width: 100%; font-size: 16px; box-shadow: 0 4px 12px rgba(28, 138, 36, 0.4); transition: background-color 0.2s;">🔄 Play Again &amp; Ride Into Sunset</button>
+</div>
+
+<script>
+    const wCards = document.querySelectorAll('.western-card');
+    const wZones = document.querySelectorAll('.western-zone');
+    const wScoreEl = document.getElementById('western-score');
+    const wStreakEl = document.getElementById('western-streak');
+    const wBadge = document.getElementById('western-badge');
+    const wFeedback = document.getElementById('western-feedback');
+    const wResetBtn = document.getElementById('western-reset');
+    const wBank = document.getElementById('western-bank');
+
+    let wScore = 0;
+    let wStreak = 0;
+
+    wCards.forEach(card => {
+        card.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', card.id);
+            card.style.opacity = '0.4';
+        });
+        card.addEventListener('dragend', () => {
+            card.style.opacity = '1';
+        });
+        card.addEventListener('mouseenter', () => {
+            if(card.getAttribute('draggable') === 'true') {
+                card.style.transform = 'translateY(-2px)';
+                card.style.backgroundColor = '#3b434f';
+                card.style.boxShadow = '0 6px 12px rgba(0,0,0,0.4)';
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.backgroundColor = '#323842';
+            card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+        });
+    });
+
+    wZones.forEach(zone => {
+        zone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            zone.style.borderColor = '#55ff66';
+            zone.style.backgroundColor = '#2d333e';
+        });
+        zone.addEventListener('dragleave', () => {
+            zone.style.borderColor = '#3e4653';
+            zone.style.backgroundColor = '#272c35';
+        });
+        zone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            zone.style.borderColor = '#3e4653';
+            zone.style.backgroundColor = '#272c35';
+
+            const cardId = e.dataTransfer.getData('text/plain');
+            const card = document.getElementById(cardId);
+            if (!card) return;
+
+            if (zone.dataset.category === card.dataset.category) {
+                zone.querySelector('.zone-items').appendChild(card);
+                card.setAttribute('draggable', 'false');
+                card.style.cursor = 'default';
+                card.style.width = '100%';
+                card.style.transform = 'none';
+                card.style.boxShadow = 'none';
+                card.style.backgroundColor = '#213028';
+                card.style.border = '1px solid #1c8a24';
+                
+                wScore++;
+                wStreak++;
+                wScoreEl.textContent = wScore;
+                wStreakEl.textContent = wStreak;
+
+                if (wStreak === 1) {
+                    wBadge.textContent = "🌵 Sharp Shooter!";
+                    wBadge.style.color = "#55ff66";
+                } else if (wStreak === 2) {
+                    wBadge.textContent = "🤠 Frontier Legend!";
+                    wBadge.style.color = "#ff9f43";
+                } else if (wStreak === 3) {
+                    wBadge.textContent = "🏆 Master Gunslinger!";
+                    wBadge.style.color = "#ffd700";
+                }
+
+                if (wScore === 3) {
+                    wFeedback.innerHTML = "🎉 <strong>High Noon Victory!</strong> You successfully mastered Western genre mechanics!";
+                    wFeedback.style.backgroundColor = "rgba(28, 138, 36, 0.25)";
+                    wFeedback.style.border = "1px solid #1c8a24";
+                    wFeedback.style.color = "#55ff66";
+                    wFeedback.style.display = 'block';
+                    wResetBtn.style.display = 'block';
+                }
+            } else {
+                wStreak = 0;
+                wStreakEl.textContent = wStreak;
+                wBadge.textContent = "❌ Missed Shot!";
+                wBadge.style.color = "#ff6b6b";
+                
+                wFeedback.innerHTML = "💥 <strong>Wrong Territory!</strong> That element doesn't belong in this zone. Try again!";
+                wFeedback.style.backgroundColor = "rgba(255, 107, 107, 0.15)";
+                wFeedback.style.border = "1px solid #ff6b6b";
+                wFeedback.style.color = "#ff6b6b";
+                wFeedback.style.display = 'block';
+                setTimeout(() => { 
+                    wFeedback.style.display = 'none'; 
+                    if(wStreak === 0) wBadge.textContent = "Saddle Up 🌵";
+                }, 2200);
+            }
+        });
+    });
+
+    wResetBtn.addEventListener('click', () => {
+        wScore = 0;
+        wStreak = 0;
+        wScoreEl.textContent = wScore;
+        wStreakEl.textContent = wStreak;
+        wBadge.textContent = "Saddle Up 🌵";
+        wBadge.style.color = "#ffb703";
+        wFeedback.style.display = 'none';
+        wResetBtn.style.display = 'none';
+        wCards.forEach(card => {
+            card.setAttribute('draggable', 'true');
+            card.style.cursor = 'grab';
+            card.style.width = card.dataset.category === 'theme' ? '100%' : 'calc(50% - 6px)';
+            card.style.backgroundColor = '#323842';
+            card.style.border = '1px solid #485263';
+            card.style.boxShadow = '0 4px 6px rgba(0,0,0,0.3)';
+            wBank.appendChild(card);
+        });
+    });
+</script>
